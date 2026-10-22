@@ -1,0 +1,140 @@
+===============================================================================
+FOLDER STRUCTURE BEFORE AND AFTER RUNNING file_organizer.py
+Target Folder: test_directory/
+Generated automatically by running create_test_files.py & file_organizer.py
+===============================================================================
+
+-------------------------------------------------------------------------------
+1. BEFORE RUNNING file_organizer.py
+   (Loose files scattered across test_directory root, plus pre-existing
+    files in Documents/ and Images/ to test collision handling)
+-------------------------------------------------------------------------------
+test_directory/
+├── Documents
+│   └── meeting_notes.txt
+├── Images
+│   └── avatar.png
+├── annual_report.pdf
+├── architecture_diagram.svg
+├── avatar.png
+├── company_logo.png
+├── customer_records.csv
+├── data_pipeline.py
+├── dataset_weights.bin
+├── financial_budget.xlsx
+├── frontend_app.js
+├── index.html
+├── loading_spinner.gif
+├── meeting_notes.txt
+├── notification_chime.wav
+├── podcast_ep22.mp3
+├── product_demo.mp4
+├── project_proposal.docx
+├── quarterly_presentation.pptx
+├── RELEASE_NOTES
+├── screen_recording.mkv
+├── server_logs.tar.gz
+├── system_backup.zip
+├── theme_styles.css
+└── vacation_photo.jpg
+
+Summary Before:
+- 2 pre-existing category subfolders (Documents, Images) containing baseline files
+- 23 loose files in test_directory root awaiting organization
+
+-------------------------------------------------------------------------------
+2. TERMINAL OUTPUT DURING EXECUTION (python file_organizer.py test_directory)
+-------------------------------------------------------------------------------
+Starting file organization in: C:\Users\HEMA\.gemini\antigravity\scratch\file-organizer\test_directory
+-----------------------------------------------------------------
+Moved: 'annual_report.pdf' -> 'Documents/annual_report.pdf'
+Moved: 'architecture_diagram.svg' -> 'Images/architecture_diagram.svg'
+Moved: 'avatar.png' -> 'Images/avatar_1.png' (renamed from 'avatar.png')
+Moved: 'company_logo.png' -> 'Images/company_logo.png'
+Moved: 'customer_records.csv' -> 'Documents/customer_records.csv'
+Moved: 'data_pipeline.py' -> 'Code/data_pipeline.py'
+Moved: 'dataset_weights.bin' -> 'Others/dataset_weights.bin'
+Moved: 'financial_budget.xlsx' -> 'Documents/financial_budget.xlsx'
+Moved: 'frontend_app.js' -> 'Code/frontend_app.js'
+Moved: 'index.html' -> 'Code/index.html'
+Moved: 'loading_spinner.gif' -> 'Images/loading_spinner.gif'
+Moved: 'meeting_notes.txt' -> 'Documents/meeting_notes_1.txt' (renamed from 'meeting_notes.txt')
+Moved: 'notification_chime.wav' -> 'Audio/notification_chime.wav'
+Moved: 'podcast_ep22.mp3' -> 'Audio/podcast_ep22.mp3'
+Moved: 'product_demo.mp4' -> 'Videos/product_demo.mp4'
+Moved: 'project_proposal.docx' -> 'Documents/project_proposal.docx'
+Moved: 'quarterly_presentation.pptx' -> 'Documents/quarterly_presentation.pptx'
+Moved: 'RELEASE_NOTES' -> 'Others/RELEASE_NOTES'
+Moved: 'screen_recording.mkv' -> 'Videos/screen_recording.mkv'
+Moved: 'server_logs.tar.gz' -> 'Archives/server_logs.tar.gz'
+Moved: 'system_backup.zip' -> 'Archives/system_backup.zip'
+Moved: 'theme_styles.css' -> 'Code/theme_styles.css'
+Moved: 'vacation_photo.jpg' -> 'Images/vacation_photo.jpg'
+
+==================================================
+               ORGANIZATION SUMMARY               
+==================================================
+Category                               Files Moved
+--------------------------------------------------
+Archives                                         2
+Audio                                            2
+Code                                             4
+Documents                                        6
+Images                                           5
+Others                                           2
+Videos                                           2
+--------------------------------------------------
+Total                                           23
+==================================================
+
+-------------------------------------------------------------------------------
+3. AFTER RUNNING file_organizer.py
+   (All loose files organized into category subfolders; collisions resolved)
+-------------------------------------------------------------------------------
+test_directory/
+├── Archives
+│   ├── server_logs.tar.gz
+│   └── system_backup.zip
+├── Audio
+│   ├── notification_chime.wav
+│   └── podcast_ep22.mp3
+├── Code
+│   ├── data_pipeline.py
+│   ├── frontend_app.js
+│   ├── index.html
+│   └── theme_styles.css
+├── Documents
+│   ├── annual_report.pdf
+│   ├── customer_records.csv
+│   ├── financial_budget.xlsx
+│   ├── meeting_notes.txt
+│   ├── meeting_notes_1.txt
+│   ├── project_proposal.docx
+│   └── quarterly_presentation.pptx
+├── Images
+│   ├── architecture_diagram.svg
+│   ├── avatar.png
+│   ├── avatar_1.png
+│   ├── company_logo.png
+│   ├── loading_spinner.gif
+│   └── vacation_photo.jpg
+├── Others
+│   ├── dataset_weights.bin
+│   └── RELEASE_NOTES
+└── Videos
+    ├── product_demo.mp4
+    └── screen_recording.mkv
+
+Observations:
+1. Category Folders Created:
+   - Archives, Audio, Code, Documents, Images, Others, Videos
+2. Safe Duplicate Handling:
+   - 'avatar.png' was renamed to 'Images/avatar_1.png' because 'Images/avatar.png' already existed.
+   - 'meeting_notes.txt' was renamed to 'Documents/meeting_notes_1.txt' because 'Documents/meeting_notes.txt' already existed.
+3. Compound Extension Handling:
+   - 'server_logs.tar.gz' was correctly identified as an archive and placed into Archives/.
+4. Extensionless & Unknown Files:
+   - 'RELEASE_NOTES' and 'dataset_weights.bin' were safely placed into Others/.
+5. Clean Target Root:
+   - Zero loose files remain in the root directory. Subfolders were not recursively flattened.
+===============================================================================
